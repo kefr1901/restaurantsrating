@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Inria+Serif|Vidaloka&display=swap');
+
+body {
+ 
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  
+}
+
+a {
+  color: #00B7FF;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Vidaloka', serif;
+  
+ 
+
+
+}
+
+label,span{
+  font-family: 'Inria Serif', serif;
+  color: rgb(224, 57, 57);;
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+.resturants{
+  padding: 0;
+  margin-left: auto;
+  
+}
+
+.fa-star{
+  color:gold;
+}
+
+.fa-utensils{
+  color: rgb(224, 57, 57);;
+}
+
+.fa-sign-in-alt{
+  color: black;
+}
+.fa-user-plus{
+  color: rgb(54, 179, 54);
+}
+

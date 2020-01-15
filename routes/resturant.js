@@ -7,14 +7,22 @@ const passport = require("passport");
 const { ensureAutenticated } = require("../config/auth")
 
 //CONNECTA TILL DB
-
+/*
 let mysqlConnecticon = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
     database: 'resturantdb',
     port: 10003
-});
+});*/
+
+let mysqlConnecticon = mysql.createConnection({
+    host: "xav-p-mariadb01.xavizus.com",
+    user: 'kevin',
+    password: 'BtlQYI9Pp0lKlIYH',
+    database: 'kevin',
+    port: 16200
+  });
 
 mysqlConnecticon.connect((err) => {
     if (err) {
@@ -49,7 +57,8 @@ mysqlConnecticon.connect((err) => {
     0,
     -1
 FROM resturantdb.resturant as rest
-LEFT OUTER JOIN resturantdb.recensioner as recen
+LEFT OUTER JOIN 
+.recensioner as recen
 ON rest.resturantID = recen.resturantID  
 WHERE recen.resturantID  Is  NULL` , (err, rows) => {
 

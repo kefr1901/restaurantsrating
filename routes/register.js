@@ -5,11 +5,11 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
 let mysqlConnecticon = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'resturantdb',
-  port: 10003
+  host: "xav-p-mariadb01.xavizus.com",
+  user: 'kevin',
+  password: 'BtlQYI9Pp0lKlIYH',
+  database: 'kevin',
+  port: 16200
 });
 
 /* LOGIN PAGE */

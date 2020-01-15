@@ -6,12 +6,13 @@ const { ensureAuthenticated } = require("../config/auth")
 
 
 let mysqlConnecticon = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'resturantdb',
-  port: 10003
+  host: "xav-p-mariadb01.xavizus.com",
+  user: 'kevin',
+  password: 'BtlQYI9Pp0lKlIYH',
+  database: 'kevin',
+  port: 16200
 });
+
 
 let reviews; //hämtar in reviews i en global variabel
 
@@ -29,8 +30,8 @@ router.get('/', ensureAuthenticated, (req, res, next) => {
     rest.resturant_rating,
     count(*) AS NR_Recen,
  avg(recen.reviewRating) as avg
- FROM resturantdb.resturant as rest
- JOIN resturantdb.recensioner as recen
+ FROM kevin.resturant as rest
+ JOIN kevin.recensioner as recen
  ON rest.resturantID = recen.resturantID  
 
  group by rest.resturantID, rest.resturant_name, rest.resturant_comment, rest.resturant_rating 
@@ -42,8 +43,8 @@ router.get('/', ensureAuthenticated, (req, res, next) => {
  rest.resturant_rating,
  0,
  -1
-FROM resturantdb.resturant as rest
-LEFT OUTER JOIN resturantdb.recensioner as recen
+FROM kevin.resturant as rest
+LEFT OUTER JOIN kevin.recensioner as recen
 ON rest.resturantID = recen.resturantID  
 WHERE recen.resturantID  Is  NULL` , (err, rows) => {
     if (err) throw err;

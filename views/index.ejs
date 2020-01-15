@@ -81,13 +81,13 @@
               <div class="form-group">
                 <label for="new_review">review</label>
                 <input type="text"  id="new_review" name="new_review" class="form-control"
-                  placeholder="Enter your new review">
+                  placeholder="Enter your new review" required>
         
               </div>
               <div class="form-group">
                 <label for="new_rating">Rating the restaurant from 1-5</label>
                 <input type="number" max="5" id="new_rating" name="new_rating" class="form-control"
-                  placeholder="Enter number between 1 & 5">
+                  placeholder="Enter number between 1 & 5" required>
         
               </div>
               <button id="review_btn"  type="submit" class="btn btn-success btn-block">Add review</button>
@@ -117,19 +117,19 @@
         <form action="/resturant/add" method="POST">
           <div class="form-group">
             <label class="text-center" for="name">Name of restaurant</label>
-            <input type="name" id="name" name="name" class="form-control" placeholder="Enter name of restaurant">
+            <input type="name" id="name" name="name" class="form-control" placeholder="Enter name of restaurant" required>
             
 
           </div>
           <div class="form-group">
             <label for="comment">Comment</label>
-            <input type="text" id="comment" name="comment" class="form-control" placeholder="" >
+            <input type="text" id="comment" name="comment" class="form-control" placeholder="" required >
             
 
           </div>
           <div class="form-group">
             <label for="rating">Rate the restaurant</label>
-            <input type="text" id="rating" name="rating" class="form-control" placeholder="Enter number between 1 & 5">
+            <input type="text" id="rating" name="rating" class="form-control" placeholder="Enter number between 1 & 5" required>
           
 
           </div>

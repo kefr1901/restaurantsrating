@@ -18,7 +18,7 @@ deleteBtns.forEach(btn =>{
      let deleteid = e.target.attributes[0].value;
         
         $.ajax({
-            url: "http://localhost:3000/resturant/delete/" + deleteid,
+            url: "https://restaurantrating.herokuapp.com/resturant/delete/" + deleteid,
             type: "DELETE"
         }).done(function (data){
             location.reload()
